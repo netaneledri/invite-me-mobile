@@ -3,14 +3,18 @@
   <PropertyGroup>
     <ProjectGuid>aaf605d6-5c50-40c1-a93d-35ffa3c04775</ProjectGuid>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-    <AppIdentifier>com.telerik.invite_me</AppIdentifier>
+    <AppIdentifier>com.israel.inviteme</AppIdentifier>
     <ProjectName>invite me</ProjectName>
     <IsRunnable>true</IsRunnable>
     <TemplateAppName>Cordova240</TemplateAppName>
-    <AndroidPermissions>android.permission.CAMERA;android.permission.VIBRATE;android.permission.ACCESS_COARSE_LOCATION;android.permission.ACCESS_FINE_LOCATION;android.permission.ACCESS_LOCATION_EXTRA_COMMANDS;android.permission.READ_PHONE_STATE;android.permission.INTERNET;android.permission.RECEIVE_SMS;android.permission.RECORD_AUDIO;android.permission.MODIFY_AUDIO_SETTINGS;android.permission.READ_CONTACTS;android.permission.WRITE_CONTACTS;android.permission.WRITE_EXTERNAL_STORAGE;android.permission.ACCESS_NETWORK_STATE;android.permission.ACCOUNT_MANAGER;android.permission.GET_ACCOUNTS;android.permission.MANAGE_ACCOUNTS;android.permission.BROADCAST_STICKY</AndroidPermissions>
+    <AndroidPermissions>android.permission.CAMERA;android.permission.VIBRATE;android.permission.ACCESS_COARSE_LOCATION;android.permission.ACCESS_FINE_LOCATION;android.permission.ACCESS_LOCATION_EXTRA_COMMANDS;android.permission.READ_PHONE_STATE;android.permission.INTERNET;android.permission.RECEIVE_SMS;android.permission.RECORD_AUDIO;android.permission.MODIFY_AUDIO_SETTINGS;android.permission.READ_CONTACTS;android.permission.WRITE_CONTACTS;android.permission.WRITE_EXTERNAL_STORAGE;android.permission.ACCESS_NETWORK_STATE;android.permission.ACCOUNT_MANAGER;android.permission.GET_ACCOUNTS;android.permission.MANAGE_ACCOUNTS;android.permission.BROADCAST_STICKY;android.permission.GET_TASKS;android.permission.WAKE_LOCK</AndroidPermissions>
     <DeviceOrientations>Portrait;Landscape</DeviceOrientations>
     <iOSStatusBarStyle>Default</iOSStatusBarStyle>
     <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
+    <BundleVersion>1.0</BundleVersion>
+    <iOSDisplayName>invite me</iOSDisplayName>
+    <iOSDeviceFamily>1</iOSDeviceFamily>
+    <AndroidVersionCode>1</AndroidVersionCode>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="App_Resources" />
@@ -32,8 +36,23 @@
     <Folder Include="App_Resources\Android\drawable-nodpi">
       <Platform>Android</Platform>
     </Folder>
+    <Folder Include="img" />
+    <Folder Include="img\events" />
+    <Folder Include="img\event" />
+    <Folder Include="img\creditgifts" />
+    <Folder Include="img\navigate" />
+    <Folder Include="img\menu" />
+    <Folder Include="img\error" />
+    <Folder Include="img\photoswipe" />
+    <Folder Include="img\photoswipe\full" />
+    <Folder Include="img\photoswipe\thumb" />
+    <Folder Include="img\seats" />
+    <Folder Include="img\rsvp" />
+    <Folder Include="img\profile" />
+    <Folder Include="img\share" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
     <Resource Include="App_Resources\iOS\icon.png" />
     <Resource Include="App_Resources\iOS\icon@2x.png" />
     <Resource Include="App_Resources\iOS\icon-72.png" />
@@ -54,9 +73,139 @@
     <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
-    <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\back_button.png" />
+    <Content Include="img\bg.png" />
+    <Content Include="img\big_button.png" />
+    <Content Include="img\big_button_dark.png" />
+    <Content Include="img\camera_img_border.png" />
+    <Content Include="img\creditgifts\icon.png" />
+    <Content Include="img\creditgifts\input.png" />
+    <Content Include="img\creditgifts\submit_button.png" />
+    <Content Include="img\error\box_bg.png" />
+    <Content Include="img\error\icon.png" />
+    <Content Include="img\error\overly.png" />
+    <Content Include="img\events\bg.png" />
+    <Content Include="img\events\button.png" />
+    <Content Include="img\events\item_arrow.png" />
+    <Content Include="img\events\item_bg.png" />
+    <Content Include="img\events\item_selected_arrow.png" />
+    <Content Include="img\events\item_selected_bg.png" />
+    <Content Include="img\events\picture_shape.png" />
+    <Content Include="img\events\texture.png" />
+    <Content Include="img\events_icon.png" />
+    <Content Include="img\events_icon_white.png" />
+    <Content Include="img\event\bg.jpg" />
+    <Content Include="img\event\bg.png" />
+    <Content Include="img\event\camera_icon.png" />
+    <Content Include="img\event\creditgifts_icon.png" />
+    <Content Include="img\event\gallery_icon.png" />
+    <Content Include="img\event\greeting_icon.png" />
+    <Content Include="img\event\item_bg.png" />
+    <Content Include="img\event\menu_icon.png" />
+    <Content Include="img\event\navigate_icon.png" />
+    <Content Include="img\event\rsvp_icon.png" />
+    <Content Include="img\event\seats_icon.png" />
+    <Content Include="img\event\video_icon.png" />
+    <Content Include="img\facebook_icon.png" />
+    <Content Include="img\final_texture.jpg" />
+    <Content Include="img\greeting_img_border.png" />
+    <Content Include="img\header_back_button.png" />
+    <Content Include="img\header_bg.png" />
+    <Content Include="img\header_title.png" />
+    <Content Include="img\home_icon.png" />
+    <Content Include="img\home_icon_white.png" />
+    <Content Include="img\info_icon.png" />
+    <Content Include="img\left_arrow_shape.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\menu\bigline_bg.png" />
+    <Content Include="img\menu\circle.png" />
+    <Content Include="img\menu\circle_v.png" />
+    <Content Include="img\menu\icon.png" />
+    <Content Include="img\menu\input_small.png" />
+    <Content Include="img\menu\input_wide.png" />
+    <Content Include="img\menu\line_bg.png" />
+    <Content Include="img\menu\title_bg.png" />
+    <Content Include="img\navigate\button.png" />
+    <Content Include="img\navigate\img.png" />
+    <Content Include="img\photoswipe\full\001.jpg" />
+    <Content Include="img\photoswipe\full\002.jpg" />
+    <Content Include="img\photoswipe\full\003.jpg" />
+    <Content Include="img\photoswipe\full\004.jpg" />
+    <Content Include="img\photoswipe\full\005.jpg" />
+    <Content Include="img\photoswipe\full\006.jpg" />
+    <Content Include="img\photoswipe\full\007.jpg" />
+    <Content Include="img\photoswipe\full\008.jpg" />
+    <Content Include="img\photoswipe\full\009.jpg" />
+    <Content Include="img\photoswipe\full\010.jpg" />
+    <Content Include="img\photoswipe\full\011.jpg" />
+    <Content Include="img\photoswipe\full\012.jpg" />
+    <Content Include="img\photoswipe\full\013.jpg" />
+    <Content Include="img\photoswipe\full\014.jpg" />
+    <Content Include="img\photoswipe\full\015.jpg" />
+    <Content Include="img\photoswipe\full\016.jpg" />
+    <Content Include="img\photoswipe\full\017.jpg" />
+    <Content Include="img\photoswipe\full\018.jpg" />
+    <Content Include="img\photoswipe\full\019.jpg" />
+    <Content Include="img\photoswipe\full\020.jpg" />
+    <Content Include="img\photoswipe\thumb\001.jpg" />
+    <Content Include="img\photoswipe\thumb\002.jpg" />
+    <Content Include="img\photoswipe\thumb\003.jpg" />
+    <Content Include="img\photoswipe\thumb\004.jpg" />
+    <Content Include="img\photoswipe\thumb\005.jpg" />
+    <Content Include="img\photoswipe\thumb\006.jpg" />
+    <Content Include="img\photoswipe\thumb\007.jpg" />
+    <Content Include="img\photoswipe\thumb\008.jpg" />
+    <Content Include="img\photoswipe\thumb\009.jpg" />
+    <Content Include="img\photoswipe\thumb\010.jpg" />
+    <Content Include="img\photoswipe\thumb\011.jpg" />
+    <Content Include="img\photoswipe\thumb\012.jpg" />
+    <Content Include="img\photoswipe\thumb\013.jpg" />
+    <Content Include="img\photoswipe\thumb\014.jpg" />
+    <Content Include="img\photoswipe\thumb\015.jpg" />
+    <Content Include="img\photoswipe\thumb\016.jpg" />
+    <Content Include="img\photoswipe\thumb\017.jpg" />
+    <Content Include="img\photoswipe\thumb\018.jpg" />
+    <Content Include="img\photoswipe\thumb\019.jpg" />
+    <Content Include="img\photoswipe\thumb\020.jpg" />
+    <Content Include="img\profile\bg.png" />
+    <Content Include="img\profile\button.png" />
+    <Content Include="img\profile\icon.png" />
+    <Content Include="img\profile_icon.png" />
+    <Content Include="img\profile_icon_white.png" />
+    <Content Include="img\purple_button.png" />
+    <Content Include="img\rsvp\input.png" />
+    <Content Include="img\rsvp\no_button.png" />
+    <Content Include="img\rsvp\no_button_selected.png" />
+    <Content Include="img\rsvp\no_icon.png" />
+    <Content Include="img\rsvp\submit_button.png" />
+    <Content Include="img\rsvp\yes_button.png" />
+    <Content Include="img\rsvp\yes_button_selected.png" />
+    <Content Include="img\rsvp\yes_icon.png" />
+    <Content Include="img\seats\bg.png" />
+    <Content Include="img\seats\fork.png" />
+    <Content Include="img\seats\knife.png" />
+    <Content Include="img\seats\plate.png" />
+    <Content Include="img\seats\plate_big.png" />
+    <Content Include="img\share\bg.jpg" />
+    <Content Include="img\share\bg.png" />
+    <Content Include="img\share\button.png" />
+    <Content Include="img\share\icon.png" />
+    <Content Include="img\share_icon.png" />
+    <Content Include="img\share_icon_white.png" />
+    <Content Include="img\side_button.png" />
+    <Content Include="img\splashscreen.png" />
+    <Content Include="img\tabs_bg.png" />
+    <Content Include="img\tabs_bg_final.png" />
+    <Content Include="img\tabs_item_bg.png" />
+    <Content Include="img\tabs_selected_item_bg.png" />
+    <Content Include="img\texture.png" />
+    <Content Include="img\texture_bg.png" />
+    <Content Include="img\texture_bg_big.jpg" />
+    <Content Include="img\twitter_icon.png" />
+    <Content Include="img\video-js.png" />
+    <Content Include="img\x.png" />
     <Content Include="index.html" />
     <Content Include="kendo\js\jquery.min.js" />
     <Content Include="kendo\js\kendo.mobile.min.js" />
@@ -64,7 +213,12 @@
     <Content Include="kendo\styles\images\KendoUI.ttf" />
     <Content Include="kendo\styles\images\KendoUI.woff" />
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
-    <Content Include="scripts\hello-world.js" />
+    <Content Include="scripts\jquery.simplemodal.js" />
+    <Content Include="scripts\main.js" />
+    <Content Include="scripts\photoswipe\code.photoswipe.jquery-3.0.5.min.js" />
+    <Content Include="scripts\photoswipe\klass.min.js" />
+    <Content Include="scripts\session.js" />
+    <Content Include="scripts\video.js" />
     <Content Include="styles\main.css" />
     <Content Include="cordova.ios.js">
       <Platform>iOS</Platform>
@@ -74,6 +228,17 @@
       <Platform>Android</Platform>
       <TargetName>cordova.js</TargetName>
     </Content>
+    <Content Include="styles\photoswipe.css" />
+    <Content Include="styles\video.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <CordovaPlugin Include="com.phonegap.plugins.childbrowser">
+      <Version>4.1.0</Version>
+      <Name>Child Browser</Name>
+    </CordovaPlugin>
+  </ItemGroup>
+  <ItemGroup>
+    <CordovaPluginContent Include="com.phonegap.plugins.childbrowser\childbrowser.js" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>
