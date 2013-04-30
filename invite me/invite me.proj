@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>aaf605d6-5c50-40c1-a93d-35ffa3c04775</ProjectGuid>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-    <AppIdentifier>com.israel.inviteme</AppIdentifier>
+    <AppIdentifier>com.inviteme.israel</AppIdentifier>
     <ProjectName>invite me</ProjectName>
     <IsRunnable>true</IsRunnable>
     <TemplateAppName>Cordova240</TemplateAppName>

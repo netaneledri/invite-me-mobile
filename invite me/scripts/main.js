@@ -56,18 +56,22 @@ function Application()
 		});
 	};
 	
-	this.loadAppUser = function(){
+	this.loadAppUser = function(after){
 		var t = this;
 		this.request('app_user/register',{ uuid : device.uuid , platform : device.platform , device_model : device.model , device_height : window.innerHeight , device_width : window.innerWidth },function(app_user){	
 			session.set('app_user',app_user);
-			t.loadAppUserEvents();
+			t.loadAppUserEvents(after);
 		});
 	};
 
-	this.loadAppUserEvents = function(){
+	this.loadAppUserEvents = function(after){
         var that = this;
 		this.request('app_user/get/events',{ uuid : device.uuid },function(events){
 			session.set('event',events[0]);
+            if(after != null)
+            {
+                after();
+            }
 		});
 	};
     
@@ -288,6 +292,18 @@ function rsvpViewInit()
 			}
 		});
 	});
+	
+    $("#rsvp-field").click(function(e){
+        e.preventDefault();
+        var p = prompt('הכנס את סך המוזמנים שמגיעים לאירוע כולל אותך',$("#rsvp-input").val());
+        if(p != null && p != "" && isNaN(p) == false)
+        {
+            $("#rsvp-input").val(p);
+			setTimeout(function(){
+				$("#rsvp-view #attend-yes form").submit();
+			},50);
+        }
+    });
 
 	$('#rsvp-view #attend-no-button').click(function(e){
 		e.preventDefault();
@@ -456,10 +472,15 @@ function homeViewInit()
             {
                 app.infoBox.show('שגיאה : ההתחברות לאירוע נכשלה',data.message);
             } else {
+                app.infoBox.afterHide = function(){
+                    app.loadAppUser(function(){
+                        eventsViewInit();
+                        setTimeout(function(){
+                            kapp.navigate("#events-view");
+                        },300);
+                    });
+                };
                 app.infoBox.show('ההתחברות לאירוע בוצעה בהצלחה !','לחץ אישור על מנת לעבור לאירוע');
-                app.loadAppUser();
-                eventsViewInit();
-                kapp.navigate("#events-view");
             }
         });
         return false;

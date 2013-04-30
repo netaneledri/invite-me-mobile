@@ -430,6 +430,13 @@ a#event-enter-button {
 	margin-left:5px;
 }
 
+#rsvp-field {
+    float:right;
+    margin-left:5px;
+    margin-right:40px;
+    margin-top:-2px;
+}
+
 #rsvp-submit {
 	background: url('../img/rsvp/submit_button.png') no-repeat;
 	height:38px;
